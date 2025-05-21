@@ -1,0 +1,41 @@
+div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #D6B938;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.toggle-icon {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform .3s ease;
+
+  &.rotated {
+    transform: rotate(-180deg);
+  }
+}
+
+.deleted {
+  background-color: rgba(97, 106, 97, 0.72);
+  color: #827f7f;
+  border: 1px solid rgba(97, 106, 97, 0.72);
+}
+
+.child-list {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  list-style: none;
+  transition: all 0.3s ease-out;
+
+  &.open {
+    max-height: 1000px;
+    transition: all 0.5s ease-in;
+  }
+}

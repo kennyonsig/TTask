@@ -1,0 +1,13 @@
+
+<div class="{{ hasIsDeleted ? 'deleted' : ''}}">
+  {{ treeElem.id }} - {{ treeElem.title }}
+  <span class="toggle-icon" (click)="toggle()" [class.rotated]="isOpen">{{ hasChildren ? '↓' : '' }}</span>
+</div>
+
+@if (hasChildren) {
+  <ul class="child-list" [class.open]="isOpen">
+    @for (item of treeElem.children; track item.id) {
+     <li><app-accordion [treeElem]="item"></app-accordion></li>
+    }
+  </ul>
+}
