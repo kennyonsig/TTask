@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use 'fonts';
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,7 @@
 }
 html, body {
   min-height: 100vh;
+  font-family: 'Novelist', sans-serif;
 }
 
 body {
